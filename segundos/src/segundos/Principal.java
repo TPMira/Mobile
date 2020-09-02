@@ -1,15 +1,18 @@
 package segundos;
 
+import java.util.Scanner;
+
 public class Principal {
 	public static void main(String [] args) {
-		
-	Horario h1 = new Horario();
 	
-	System.out.println("Hora: " + h1.getSegundo());
+	Scanner sc = new Scanner(System.in);
+	Horario h = new Horario();
 	
-	h1.setSegundo((int)4372);
+	System.out.println("Informe a quantidade de segundos que serão calculados: ");
+	int valor = sc.nextInt();
+	h.setSegundo(valor);
 	
-	System.out.println("Hora = " + h1.getSegundo()/3600 + " Minutos = " + h1.getSegundo()%3600/60 + " Segundos = " + h1.getSegundo()%3600%60%60);
+	System.out.println("\nSão " + h.getHora()+" horas, "  + h.getMinuto()+ " minutos e " + h.getSegundo()+ " segundos.");
 		
 	}
 
